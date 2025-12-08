@@ -1,0 +1,209 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117; /* Fond sombre style terminal */
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #58a6ff; /* Bleu informatique */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background: #161b22;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c9d1d9;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #58a6ff;
+}
+
+/* ===== HERO ===== */
+#hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0d1117, #161b22);
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #8b949e;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #238636; /* vert console */
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #2ea043;
+}
+
+/* ===== SECTIONS ===== */
+.container {
+    width: 85%;
+    margin: 60px auto;
+}
+
+h2.section-title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 2px solid #58a6ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== GRID CARDS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card, .cert-card, .skill-card {
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.card:hover, .cert-card:hover, .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card h3 {
+    margin: 15px 0;
+    color: #58a6ff;
+}
+
+.skill-card ul {
+    list-style: none;
+    color: #8b949e;
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: #238636;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.cert-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.cert-card h3 {
+    margin-top: 10px;
+    color: #58a6ff;
+}
+
+.cert-card p {
+    color: #8b949e;
+}
+
+.cert-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #238636;
+}
+
+.cert-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== TABLEAU DE SYNTHESE ===== */
+#tableau-synthese .btn {
+    background-color: #0366d6;
+}
+
+#tableau-synthese .btn:hover {
+    background-color: #0550a0;
+}
+
+/* ===== CONTACT ===== */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #21262d;
+    color: #c9d1d9;
+}
+
+form button.btn {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    margin-top: 40px;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
