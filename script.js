@@ -1,77 +1,28 @@
-/* ===============================
-   SCRIPT GLOBAL DU PORTFOLIO
-=============================== */
+// Apparition fluide des sections au scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".container, #hero, .card, .skill-card, .cert-card, .veille-block");
 
-// ===== NAVIGATION SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        section.classList.add("hidden");
+        observer.observe(section);
     });
 });
 
-// ===== MODALE TABLEAU DE SYNTHESE =====
-const modal = document.getElementById("tableModal");
-const btn = document.getElementById("openTableBtn");
-const closeModal = document.querySelector(".modal .close");
+// Message de confirmation pour le formulaire
+const form = document.getElementById("contactForm");
+const msgSent = document.getElementById("msgSent");
 
-if(btn){
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-}
-
-if(closeModal){
-    closeModal.onclick = function() {
-        modal.style.display = "none";
-    }
-}
-
-window.onclick = function(event) {
-    if(event.target == modal){
-        modal.style.display = "none";
-    }
-}
-
-// ===== FORMULAIRE DE CONTACT =====
-const form = document.getElementById('contactForm');
-const msgSent = document.getElementById('msgSent');
-
-if(form){
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        msgSent.textContent = "✅ Votre message a été envoyé ! Merci.";
-        msgSent.style.color = "#238636";
-        form.reset();
-    });
-}
-
-// ===== ANIMATION SUR LES CARTES =====
-const cards = document.querySelectorAll('.card, .cert-card, .skill-card');
-
-cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'scale(1.05)';
-        card.style.transition = '0.3s';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1)';
-    });
-});
-
-// ===== BOUTONS =====
-const buttons = document.querySelectorAll('.btn');
-
-buttons.forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        btn.style.opacity = '0.9';
-    });
-    btn.addEventListener('mouseleave', () => {
-        btn.style.opacity = '1';
-    });
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msgSent.textContent = "✅ Votre message a bien été envoyé !";
+    msgSent.style.color = "#00ffcc";
+    form.reset();
 });
