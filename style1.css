@@ -1,209 +1,153 @@
-/* ===== RESET ===== */
-* {
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d; 
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* ===== GLOBAL ===== */
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0d1117; /* Fond sombre style terminal */
-    color: #c9d1d9;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    color: #58a6ff; /* Bleu informatique */
-}
-
-a {
-    text-decoration: none;
-}
-
-/* ===== NAVBAR ===== */
-header {
-    background: #161b22;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    scroll-behavior: smooth; 
 }
 
 .navbar {
-    width: 90%;
-    margin: auto;
+    background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.logo {
+    color: #00ffcc;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00ffcc;
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
     gap: 20px;
-    list-style: none;
 }
 
 .nav-links a {
-    color: #c9d1d9;
-    transition: 0.3s;
-    font-weight: 500;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #58a6ff;
+    color: #00ffcc;
+    text-shadow: 0 0 6px #00ffcc;
 }
 
-/* ===== HERO ===== */
+
 #hero {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
     text-align: center;
-    background: linear-gradient(135deg, #0d1117, #161b22);
+    padding: 100px 20px;
 }
 
 #hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    color: #8b949e;
+    color: #00ffcc;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background-color: #238636; /* vert console */
-    color: white;
+    background-color: #00ffcc;
+    color: #121212;
+    padding: 10px 20px;
     border-radius: 6px;
-    font-weight: 600;
-    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #2ea043;
+    transform: scale(1.05);
+    background-color: #00e6b8;
+    box-shadow: 0 0 12px #00ffcc;
 }
 
-/* ===== SECTIONS ===== */
+
 .container {
-    width: 85%;
-    margin: 60px auto;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-h2.section-title {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    border-bottom: 2px solid #58a6ff;
-    display: inline-block;
-    padding-bottom: 5px;
+.card, .skill-card, .cert-card, .veille-block {
+    background-color: #1a1a1a;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===== GRID CARDS ===== */
-.grid {
+.card:hover, .skill-card:hover, .cert-card:hover, .veille-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px #00ffcc;
+}
+
+
+.veille-block h4 {
+    margin-top: 0;
+    color: #00ffcc;
+    border-left: 4px solid #00ffcc;
+    padding-left: 10px;
+}
+
+.cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
-.card, .cert-card, .skill-card {
-    background-color: #161b22;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-.card:hover, .cert-card:hover, .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
-}
-
-/* ===== SKILLS ===== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.skill-card h3 {
-    margin: 15px 0;
-    color: #58a6ff;
-}
-
-.skill-card ul {
-    list-style: none;
-    color: #8b949e;
-}
-
-.skill-icon {
-    font-size: 2rem;
-    color: #238636;
-}
-
-/* ===== CERTIFICATIONS ===== */
 .cert-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #2c2c2c;
 }
 
 .cert-card h3 {
-    margin-top: 10px;
-    color: #58a6ff;
-}
-
-.cert-card p {
-    color: #8b949e;
+    color: #00ffcc;
+    margin: 10px 0;
 }
 
 .cert-card a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #238636;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cert-card a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 6px #00ffcc;
 }
 
-/* ===== TABLEAU DE SYNTHESE ===== */
-#tableau-synthese .btn {
-    background-color: #0366d6;
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-#tableau-synthese .btn:hover {
-    background-color: #0550a0;
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* ===== CONTACT ===== */
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 6px;
-    background-color: #21262d;
-    color: #c9d1d9;
-}
 
-form button.btn {
-    width: 100%;
-}
-
-/* ===== FOOTER ===== */
 footer {
+    background-color: #1a1a1a;
     text-align: center;
     padding: 20px;
-    background: #161b22;
-    margin-top: 40px;
-    color: #8b949e;
-    font-size: 0.9rem;
+    color: #888;
 }
