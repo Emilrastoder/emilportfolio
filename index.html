@@ -1,29 +1,31 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Emil Rastoder</title>
-    <link rel="stylesheet" href="style1.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
 
-
-    <header>
-        <nav class="navbar">
+    <!-- ========== EN-TÊTE / NAVIGATION ========== -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
             <h1 class="logo">Emil Rastoder</h1>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">À propos</a></li>
-                 <li><a href="#Formations">Formations</a></li>
+                <li><a href="#Formations">Formations</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#Documentation">Documentation</a></li>
                 <li><a href="#veille">Veille</a></li>
                 <li><a href="#Personnel">Perso</a></li>
                 <li><a href="#tableau-synthese">Tableau</a></li>
@@ -32,280 +34,339 @@
         </nav>
     </header>
 
+    <main>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Bienvenue</h2>
-            <p>Étudiant en BTS SIO SISR, passionné par la cybersécurité, le réseau, le développement et les nouvelles technologies.</p>
-            <a href="#contact" class="btn">Me contacter</a>
-        </div>
-    </section>
-
-    
-    <section id="Contactperso" class="container">
-        <h2>Contact Perso </h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <p>Email : eras39948@gmail.com </p>
-                <p>Tél : 07 82 58 65 33</p>
-                <p>LinkedIn : Emil Rastoder</p>
+        <!-- ========== ACCUEIL ========== -->
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Bienvenue</h2>
+                <p>Étudiant en BTS SIO SISR, passionné par la cybersécurité, le réseau, le développement et les nouvelles technologies.</p>
+                <a href="#contact" class="btn">Me contacter</a>
             </div>
-    </section>
+        </section>
 
-
-    <section id="about" class="container">
-        <h2>À propos</h2>
-        <p>
-            Je m'appelle <b>Emil Rastoder</b>, j'ai 18 ans et je suis étudiant en BTS SIO option SISR au Lycée Turgot (Paris).  
-            Passionné depuis mes 14 ans par la cybersécurité et l’informatique, j’ai approfondi mes compétences grâce à mon 
-            Bac Pro SN et maintenant au BTS SIO. Passionné par l’informatique et les nouvelles technologies, je m’intéresse particulièrement à l’administration des systèmes, la gestion et la sécurisation des réseaux, ainsi qu’à la cybersécurité.<br>
-<br>
-Au fil de mes stages et de mes expériences, j’ai développé des compétences en travail d’équipe, en autonomie et en relation clientèle. Je suis curieux, organisé et motivé à apprendre en continu pour améliorer mes connaissances techniques.
-
-Mon objectif professionnel est de devenir administrateur systèmes et réseaux ou expert en cybersécurité, afin de contribuer à la protection et à l’optimisation des infrastructures informatiques en entreprise.
-        </p>
-    </section>
-
-       <section id="Formations" class="container">
-        <h2>Formations</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <p><b>Stage 2022-2023 : 316 Colors</b></p>
-                <p>- Travail d'équipe</p>
-                <p>- Découverte du monde du travail</p>
-                <p>- Découverte du milieu de l'imprimerie 2D/3D</p>
-    
-                <p><b>Stage 2023-2024 : Megaphone</b></p>
-                <p>- Travail d'équipe</p>
-                <p>- Vente d'objets numériques</p>
-                <p>- Relation clientèle</p>
-    
-                <p><b>Stage 2024-2025 : Exagon Paris</b></p>
-                <p>- Travail autonome</p>
-                <p>- Diagnostic de PC</p>
-                <p>- Réparation de PC</p>
-                <p>- Création de setups informatiques pour des clients</p>
+        <!-- ========== CONTACT PERSO ========== -->
+        <section id="Contactperso" class="container">
+            <h2>Contact Perso </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <p>Email : eras39948@gmail.com </p>
+                    <p>Tél : 07 82 58 65 33</p>
+                    <p>LinkedIn : Emil Rastoder</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
- <section id="projects" class="container">
-        <h2>Mes Projets</h2>
-        <div class="grid">
-            <div class="card"><h3>Projet 1</h3><p>Site Internet de Location de Voiture</p>
-            <h4>
-            <P>Objectif du projet
-                Créer une plateforme en ligne permettant aux utilisateurs de réserver une voiture de location facilement, avec une interface intuitive et moderne. Le site vise à simplifier le processus de recherche, de comparaison et de réservation de véhicules. <br> Fonctionnalités principales
-                Catalogue de voitures : affichage des véhicules disponibles avec photos, prix et caractéristiques (marque, modèle, type, carburant, etc.).
-                
-                Recherche et filtres : possibilité de filtrer par catégorie (citadine, SUV, utilitaire), prix ou disponibilité.
-                
-                Réservation en ligne : formulaire sécurisé pour choisir les dates, le lieu de retrait et de retour.
-                
-                Gestion des utilisateurs : espace client avec historique des réservations.
-                
-                Interface administrateur : ajout, modification et suppression des véhicules, suivi des réservations.</P>
-           </h4>
-        
-        
-        </div>
-
-            <div class="card"><h3>Projet 2</h3><p>Installation de LAMP + WordPress sur Linux</p>
-                <h4><P>Objectif du projet
-                    Mettre en place un environnement serveur complet (LAMP) sur une distribution Linux afin d’héberger un site WordPress. Ce projet démontre des compétences en administration système, configuration serveur et déploiement d’applications web. <br> Étapes et fonctionnalités principales
-                    Installation du stack LAMP :
-                    
-                    Linux : système d’exploitation de base.
-                    
-                    Apache : serveur web pour gérer les requêtes HTTP.
-                    
-                    MySQL/MariaDB : base de données pour stocker le contenu du site.
-                    
-                    PHP : langage côté serveur pour exécuter WordPress.
-                    
-                    Configuration du serveur : paramétrage des hôtes virtuels, gestion des permissions et sécurisation des accès.
-                    
-                    Installation de WordPress : téléchargement, configuration du fichier wp-config.php, connexion à la base de données.
-                    
-                    Personnalisation : ajout de thèmes et plugins pour enrichir le site.
-                    
-                    Sécurité et optimisation : mise en place de certificats SSL, gestion des mises à jour, optimisation des performances (cache, compression).</P></h4></div>
-            <div class="card"><h3>Projet 3</h3><p>Création d'un serveur de jeu sur Linux</p>
-                <h4><P>Objectif du projet
-                    Mettre en place un serveur de jeu multijoueur sur une distribution Linux afin de permettre aux utilisateurs de se connecter et jouer en ligne. Ce projet illustre des compétences en administration système, gestion réseau et configuration de services dédiés aux jeux vidéo. Étapes et fonctionnalités principales
-                    Installation du système Linux : choix d’une distribution (Ubuntu/Debian/CentOS) adaptée à l’hébergement.
-                    
-                    Configuration réseau : ouverture et redirection des ports nécessaires, paramétrage du pare-feu (iptables/ufw).
-                    
-                    Installation du serveur de jeu : téléchargement et mise en place du moteur serveur (ex. : Minecraft, Counter-Strike, ou autre).
-                    
-                    Gestion des utilisateurs : création de comptes, attribution de droits et gestion des accès.
-                    
-                    Automatisation : scripts de démarrage/arrêt du serveur, sauvegardes régulières des mondes ou configurations.
-                    
-                    Sécurité et optimisation : surveillance des performances, mise en place de protections contre les attaques DDoS, monitoring avec outils comme htop ou Nagios. </P></h4></div>
-        </div>
-    </section>
-
-
-    <section id="skills" class="container">
-        <h2>Compétences</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Réseau & Système</h3>
-                <ul>
-                    <li>Windows Server (DHCP, DNS)</li>
-                    <li>Linux : Ubuntu / Debian</li>
-                    <li>Cisco Packet Tracer</li>
-                    <li>Proxmox</li>
-                    <li>VLAN, DHCP, NAT, Routage</li>
-                    <li>GLPI</li>
-                    <li>Serveur Apache</li>
-                </ul>
+        <!-- ========== À PROPOS ========== -->
+        <section id="about" class="container">
+            <h2>À propos</h2>
+            <div class="prose">
+                <p>
+                    Je m'appelle <b>Emil Rastoder</b>, j'ai 18 ans et je suis étudiant en BTS SIO option SISR au Lycée Turgot (Paris).
+                    Passionné depuis mes 14 ans par la cybersécurité et l’informatique, j’ai approfondi mes compétences grâce à mon
+                    Bac Pro SN et maintenant au BTS SIO. Passionné par l’informatique et les nouvelles technologies, je m’intéresse particulièrement à l’administration des systèmes, la gestion et la sécurisation des réseaux, ainsi qu’à la cybersécurité.
+                </p>
+                <p>
+                    Au fil de mes stages et de mes expériences, j’ai développé des compétences en travail d’équipe, en autonomie et en relation clientèle. Je suis curieux, organisé et motivé à apprendre en continu pour améliorer mes connaissances techniques.
+                </p>
+                <p>
+                    Mon objectif professionnel est de devenir administrateur systèmes et réseaux ou expert en cybersécurité, afin de contribuer à la protection et à l’optimisation des infrastructures informatiques en entreprise.
+                </p>
             </div>
-            <div class="skill-card">
-                <h3>Développement</h3>
-                <ul>
-                    <li>HTML / CSS / JavaScript</li>
-                    <li>Python (Bases)</li>
-                    <li>PHP / MySQL</li>
-                    <li>Bootstrap</li>
-                </ul>
+        </section>
+
+        <!-- ========== FORMATIONS ========== -->
+        <section id="Formations" class="container">
+            <h2>Formations</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Stage 2022-2023 : 316 Colors</h3>
+                    <ul>
+                        <li>Travail d'équipe</li>
+                        <li>Découverte du monde du travail</li>
+                        <li>Découverte du milieu de l'imprimerie 2D/3D</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3>Stage 2023-2024 : Megaphone</h3>
+                    <ul>
+                        <li>Travail d'équipe</li>
+                        <li>Vente d'objets numériques</li>
+                        <li>Relation clientèle</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3>Stage 2024-2025 : Exagon Paris</h3>
+                    <ul>
+                        <li>Travail autonome</li>
+                        <li>Diagnostic de PC</li>
+                        <li>Réparation de PC</li>
+                        <li>Création de setups informatiques pour des clients</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3>Stage 2025-2026 : Tennisport</h3>
+                    <ul>
+                        <li>Restauration de Site Web</li>
+                        <li>Géstion de BDD et Infra</li>
+                        <li>Maintenance Web</li>
+                        <li>Sécurité et Projets</li>
+                    </ul>
+                </article>
             </div>
-            <div class="skill-card">
-                <h3>Transversal</h3>
-                <ul>
-                    <li>Git / GitHub</li>
-                    <li>Virtualisation (VirtualBox)</li>
-                    <li>Travail d'équipe & documentation</li>
-                    <li>Pack Office</li>
-                
-                </ul>
+        </section>
+
+        <!-- ========== PROJETS ========== -->
+        <section id="projects" class="container">
+            <h2>Mes Projets</h2>
+            <div class="grid">
+
+                <article class="card project-card">
+                    <h3>Projet 1</h3>
+                    <p class="project-title">Site Internet de Location de Voiture</p>
+                    <h4>Objectif du projet</h4>
+                    <p>Créer une plateforme en ligne permettant aux utilisateurs de réserver une voiture de location facilement, avec une interface intuitive et moderne. Le site vise à simplifier le processus de recherche, de comparaison et de réservation de véhicules.</p>
+                    <h4>Fonctionnalités principales</h4>
+                    <ul>
+                        <li>Catalogue de voitures : affichage des véhicules disponibles avec photos, prix et caractéristiques (marque, modèle, type, carburant, etc.).</li>
+                        <li>Recherche et filtres : possibilité de filtrer par catégorie (citadine, SUV, utilitaire), prix ou disponibilité.</li>
+                        <li>Réservation en ligne : formulaire sécurisé pour choisir les dates, le lieu de retrait et de retour.</li>
+                        <li>Gestion des utilisateurs : espace client avec historique des réservations.</li>
+                        <li>Interface administrateur : ajout, modification et suppression des véhicules, suivi des réservations.</li>
+                    </ul>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Projet 2</h3>
+                    <p class="project-title">Installation de LAMP + WordPress sur Linux</p>
+                    <h4>Objectif du projet</h4>
+                    <p>Mettre en place un environnement serveur complet (LAMP) sur une distribution Linux afin d’héberger un site WordPress. Ce projet démontre des compétences en administration système, configuration serveur et déploiement d’applications web.</p>
+                    <h4>Étapes et fonctionnalités principales</h4>
+                    <ul>
+                        <li>Installation du stack LAMP :
+                            <ul>
+                                <li>Linux : système d’exploitation de base.</li>
+                                <li>Apache : serveur web pour gérer les requêtes HTTP.</li>
+                                <li>MySQL/MariaDB : base de données pour stocker le contenu du site.</li>
+                                <li>PHP : langage côté serveur pour exécuter WordPress.</li>
+                            </ul>
+                        </li>
+                        <li>Configuration du serveur : paramétrage des hôtes virtuels, gestion des permissions et sécurisation des accès.</li>
+                        <li>Installation de WordPress : téléchargement, configuration du fichier wp-config.php, connexion à la base de données.</li>
+                        <li>Personnalisation : ajout de thèmes et plugins pour enrichir le site.</li>
+                        <li>Sécurité et optimisation : mise en place de certificats SSL, gestion des mises à jour, optimisation des performances (cache, compression).</li>
+                    </ul>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Projet 3</h3>
+                    <p class="project-title">Création d'un serveur de jeu sur Linux</p>
+                    <h4>Objectif du projet</h4>
+                    <p>Mettre en place un serveur de jeu multijoueur sur une distribution Linux afin de permettre aux utilisateurs de se connecter et jouer en ligne. Ce projet illustre des compétences en administration système, gestion réseau et configuration de services dédiés aux jeux vidéo.</p>
+                    <h4>Étapes et fonctionnalités principales</h4>
+                    <ul>
+                        <li>Installation du système Linux : choix d’une distribution (Ubuntu/Debian/CentOS) adaptée à l’hébergement.</li>
+                        <li>Configuration réseau : ouverture et redirection des ports nécessaires, paramétrage du pare-feu (iptables/ufw).</li>
+                        <li>Installation du serveur de jeu : téléchargement et mise en place du moteur serveur (ex. : Minecraft, Counter-Strike, ou autre).</li>
+                        <li>Gestion des utilisateurs : création de comptes, attribution de droits et gestion des accès.</li>
+                        <li>Automatisation : scripts de démarrage/arrêt du serveur, sauvegardes régulières des mondes ou configurations.</li>
+                        <li>Sécurité et optimisation : surveillance des performances, mise en place de protections contre les attaques DDoS, monitoring avec outils comme htop ou Nagios.</li>
+                    </ul>
+                </article>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section id="certifications" class="container">
-        <h2>Certifications</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <img src="ebios.jpeg" alt="Certification Ebios">
-                <h3>Ebios Risk Manager</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.linkedin.com/in/emil-rastoder-74428233a/details/certifications/1762328552465/">Voir sur LinkedIn</a>
+        <!-- ========== COMPÉTENCES ========== -->
+        <section id="skills" class="container">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Réseau & Système</h3>
+                    <ul>
+                        <li>Windows Server (DHCP, DNS)</li>
+                        <li>Linux : Ubuntu / Debian</li>
+                        <li>Cisco Packet Tracer</li>
+                        <li>GLPI</li>
+                        <li>VLAN, DHCP, NAT, Routage</li>
+                        <li>Serveur Apache</li>
+                        <li>Modèle OSI</li>
+                        <li>VLAN</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Développement</h3>
+                    <ul>
+                        <li>HTML / CSS / JavaScript</li>
+                        <li>Python (Bases)</li>
+                        <li>PHP / MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Fonctionnement SGBD</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Transversal</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Virtualisation (VirtualBox)</li>
+                        <li>Travail d'équipe & documentation</li>
+                        <li>Pack Office</li>
+                        <li>Proxmox</li>
+                        <li>Gestion de projet</li>
+                        <li>Support Informatique</li>
+                        <li>Intelligence Artificielle</li>
+                    </ul>
+                </div>
             </div>
-            <div class="cert-card">
-                <img src="cnil.jpeg" alt="Certification CNIL">
-                <h3>Protection des données (CNIL)</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.linkedin.com/in/emil-rastoder-74428233a/details/certifications/1759920328797/">Voir sur LinkedIn</a>
+        </section>
+
+        <!-- ========== CERTIFICATIONS ========== -->
+        <section id="certifications" class="container">
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <article class="cert-card">
+                    <img src="ebios.jpeg" alt="Certification Ebios">
+                    <h3>Ebios Risk Manager</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.linkedin.com/in/emil-rastoder-74428233a/details/certifications/1762328552465/">Voir sur LinkedIn</a>
+                </article>
+                <article class="cert-card">
+                    <img src="cnil.jpeg" alt="Certification CNIL">
+                    <h3>Protection des données (CNIL)</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.linkedin.com/in/emil-rastoder-74428233a/details/certifications/1759920328797/">Voir sur LinkedIn</a>
+                </article>
+                <article class="cert-card">
+                    <img src="CHB.png" alt="Computer Hardware Basics">
+                    <h3>Computer Hardware Basics</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
+                </article>
+                <article class="cert-card">
+                    <img src="Cisco.png" alt="Packet Tracer">
+                    <h3>Introduction to Packet Tracer</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
+                </article>
+                <article class="cert-card">
+                    <img src="NB.png" alt="Networking Basics">
+                    <h3>Networking Basics</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.credly.com/badges/112fafa6-93b6-460d-adaa-5a90f829c9ec/public_url">Voir sur Credly</a>
+                </article>
+                <article class="cert-card">
+                    <img src="OSB.png" alt="Operating Systems Basics">
+                    <h3>Operating Systems Basics</h3>
+                    <p>Obtenue en 2025</p>
+                    <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
+                </article>
             </div>
-            <div class="cert-card">
-                <img src="CHB.png" alt="Computer Hardware Basics">
-                <h3>Computer Hardware Basics</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
+        </section>
+
+        <!-- ========== DOCUMENTATION ========== -->
+        <section id="Documentation" class="container">
+            <h2>Mes Documentations</h2>
+            <div class="documentation-grid">
+                <a href="RASTODER_OCS_docx.docx" class="documentation-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>OCS INVENTORY</h3>
+                </a>
+                <a href="glpi.odt" class="documentation-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>GLPI</h3>
+                </a>
+                <a href="mariadb.odt" class="documentation-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Maria DB</h3>
+                </a>
+                <a href="wp.odt" class="documentation-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Wordpress</h3>
+                </a>
+                <a href="adds.odt" class="documentation-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Active Directory</h3>
+                </a>
             </div>
-            <div class="cert-card">
-                <img src="Cisco.png" alt="Packet Tracer">
-                <h3>Introduction to Packet Tracer</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
+        </section>
+
+        <!-- ========== VEILLE ========== -->
+        <section id="veille" class="container">
+            <h2>Sujet de Veille</h2>
+            <h3 class="veille-subject">« L’évolution des attaques par ransomware et les mesures de protection en entreprise » </h3>
+            <a href="veille.pdf" download class="btn"> Veille </a>
+
+            <div class="veille-grid">
+                <div class="veille-block">
+                    <h4>Définition</h4>
+                    <p>Un ransomware (ou rançongiciel) est un logiciel malveillant qui chiffre ou bloque l’accès aux données d’une organisation afin d’exiger une rançon pour les restituer. Ces attaques, en forte croissance, visent particulièrement les entreprises et peuvent paralyser leurs activités, causer des pertes financières majeures et nuire à leur réputation.</p>
+                </div>
+
+                <div class="veille-block">
+                    <h4>Événements</h4>
+                    <ul>
+                        <li>Tech Show Paris</li>
+                        <li>Ndnm</li>
+                        <li>GS Gays</li>
+                    </ul>
+                </div>
+
+                <div class="veille-block">
+                    <h4>Acteurs</h4>
+                    <ul>
+                        <li>Orange Cyberdefense</li>
+                        <li>Atos</li>
+                        <li>Stormshield</li>
+                        <li>YesWeHack</li>
+                        <li>ANSSI</li>
+                    </ul>
+                </div>
+
+                <div class="veille-block">
+                    <h4>Sources d'informations</h4>
+                    <ul>
+                        <li>Les alliances de cybercriminels relancent les attaques <a href="https://www.lemondeinformatique.fr/actualites/lire-les-attaques-ransomware-revigorees-par-les-alliances-de-cybercriminels-98627.html">- Le Monde informatique </a></li>
+                        <li>Impact sur les entreprises en 2025 <a href="https://www.daf-mag.fr/Thematique/tresorerie-1239/gestion-cash-2118/Breves/defaillances-entreprises-niveau-record-485477.htm">- daf-mag.fr </a></li>
+                        <li>Rapport Sophos 2025 - <a href="https://digital-solutions.konicaminolta.fr/infrastructure-informatique/article-ransomwares-sophos-2025/"> - digital-solutions.konicaminolta.fr </a></li>
+                        <li>Stratégies de défense essentielles <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"> - cyber.gouv.fr </a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="cert-card">
-                <img src="NB.png" alt="Networking Basics">
-                <h3>Networking Basics</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.credly.com/badges/112fafa6-93b6-460d-adaa-5a90f829c9ec/public_url">Voir sur Credly</a>
-            </div>
-            <div class="cert-card">
-                <img src="OSB.png" alt="Operating Systems Basics">
-                <h3>Operating Systems Basics</h3>
-                <p>Obtenue en 2025</p>
-                <a target="_blank" href="https://www.credly.com/badges/8835aef6-0353-4238-9a33-eea41508a841/public_url">Voir sur Credly</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- ========== PERSONNEL ========== -->
+        <section id="Personnel" class="container">
+            <h2>Personnel</h2>
+            <a href="CV.pdf" download class="btn"> MON CV </a>
+        </section>
 
-    <section id="veille" class="container">
-        <h2>Sujet de Veille</h2>
-        <h3>« L’évolution des attaques par ransomware et les mesures de protection en entreprise » </h3> <a href="veille.pdf" download class="btn"> Veille </a>
-
-        <div class="veille-block">
-            <h4>Définition</h4>
-            <p>Un ransomware (ou rançongiciel) est un logiciel malveillant qui chiffre ou bloque l’accès aux données d’une organisation afin d’exiger une rançon pour les restituer. Ces attaques, en forte croissance, visent particulièrement les entreprises et peuvent paralyser leurs activités, causer des pertes financières majeures et nuire à leur réputation.</p>
-        </div>
-
-        <div class="veille-block">
-            <h4>Événements</h4>
-            <ul>
-                <li>Tech Show Paris</li>
-                <li>Ndnm</li>
-                <li>GS Days</li>
-            </ul>
-        </div>
-
-        <div class="veille-block">
-            <h4>Acteurs</h4>
-            <ul>
-                <li>Orange Cyberdefense</li>
-                <li>Atos</li>
-                <li>Stormshield</li>
-                <li>YesWeHack</li>
-                <li>ANSSI</li>
-            </ul>
-        </div>
-
-        <div class="veille-block">
-            <h4>Sources d'informations</h4>
-            <ul>
-                <li>Les alliances de cybercriminels relancent les attaques <a href = "https://www.lemondeinformatique.fr/actualites/lire-les-attaques-ransomware-revigorees-par-les-alliances-de-cybercriminels-98627.html" >- Le Monde informatique </a> </li>
-                <li>Impact sur les entreprises en 2025 <a href = "https://www.daf-mag.fr/Thematique/tresorerie-1239/gestion-cash-2118/Breves/defaillances-entreprises-niveau-record-485477.htm">- daf-mag.fr </a> </li>
-                <li>Rapport Sophos 2025 - <a href = "https://digital-solutions.konicaminolta.fr/infrastructure-informatique/article-ransomwares-sophos-2025/" > - digital-solutions.konicaminolta.fr </a> </li>
-                <li>Stratégies de défense essentielles <a href ="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique" > - cyber.gouv.fr </a> </li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="Personnel" class="container">
-        <h2>Personnel</h2>
-        <a href="CV.pdf" download class="btn"> MON CV </a>
-    </section>
-
-
+        <!-- ========== TABLEAU DE SYNTHÈSE ========== -->
         <section id="tableau-synthese" class="container">
             <h2>Tableau de Synthèse</h2>
             <p>Vous pouvez consulter mon tableau de synthèse en cliquant sur le bouton ci-dessous :</p>
             <a href="tableaudesynthese.pdf" download class="btn">Voir le Tableau</a>
         </section>
-    
+
+        <!-- ========== CONTACT ========== -->
         <section id="contact" class="container">
             <h2>Contact</h2>
             <form id="contactForm">
-                <input type="text" placeholder="Votre nom" required>
-                <input type="email" placeholder="Votre email" required>
-                <textarea placeholder="Votre message" required></textarea>
+                <input type="text" placeholder="Votre nom" aria-label="Votre nom" required>
+                <input type="email" placeholder="Votre email" aria-label="Votre email" required>
+                <textarea placeholder="Votre message" aria-label="Votre message" rows="5" required></textarea>
                 <button type="submit" class="btn">Envoyer</button>
             </form>
-            <p id="msgSent"></p>
+            <p id="msgSent" role="status" aria-live="polite"></p>
         </section>
-    
-        <footer>
-            <p>© Emil Rastoder | BTS SIO SISR</p>
-        </footer>
-    
-        <script src="script.js"></script>
-    
-    </body>
-    </html>
-    
 
+    </main>
 
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <p>© Emil Rastoder | BTS SIO SISR</p>
+    </footer>
 
-
-
-
-
+    <script src="script.js"></script>
+</body>
+</html>
